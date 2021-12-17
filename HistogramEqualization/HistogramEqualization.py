@@ -10,7 +10,7 @@ def cdf(hist,MxN,value):
         j+=1
     return Px
 
-image=cv2.imread('LowContrastPcb.jpg',0)
+image=cv2.imread('teslaLaplacien.jpeg',0)
 imageWidth = image.shape[1]
 imageHeight = image.shape[0]
 MxN=imageHeight*imageWidth
@@ -43,4 +43,4 @@ while xPos < imageWidth:
     yPos = 0
     xPos = xPos + 1
 
-cv2.imwrite("lowContrastPcbAfter.jpg",image)
+cv2.imwrite("teslaLaplacienEqu.jpeg",image)

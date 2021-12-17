@@ -1,8 +1,6 @@
 import cv2
-from matplotlib import pyplot as plt
 
 image= cv2.imread('graypcb.jpg', 0)
-
 
 imageWidth = image.shape[1]
 imageHeight = image.shape[0]
@@ -18,7 +16,7 @@ while xPos < imageWidth:
         r = piksel / 255
         piksel=r**gamma  #gamma dönüşümü
         piksel=piksel*255  #0 ile 1 arasında olan değer 255 yani (L-1) ile çarpıldı 8 bite dönüştürüldü
-       # image.itemset((yPos,xPos),piksel)  # pikselin yeni değeri üzerine yazıldı
+        image.itemset((yPos,xPos),piksel)  # pikselin yeni değeri üzerine yazıldı
 
         yPos = yPos + 1
 

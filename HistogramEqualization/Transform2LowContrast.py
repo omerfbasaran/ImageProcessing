@@ -1,5 +1,4 @@
 import cv2
-from matplotlib import pyplot as plt
 
 image=cv2.imread("graypcb.jpg",0)
 
@@ -27,10 +26,3 @@ while xPos < imageWidth:
     xPos = xPos + 1
 
 cv2.imwrite("LowContrastPcb.jpg", image) #işlenmiş resmi kaydet
-cv2.imshow('Pcb', image)
-
-dst = cv2.calcHist(image, [0], None, [256], [0, 256])
-
-plt.hist(image.ravel(), 256, [0, 256])
-plt.title('Histogram for Original gray scale image')
-plt.show()

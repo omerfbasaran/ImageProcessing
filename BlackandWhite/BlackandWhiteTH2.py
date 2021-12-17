@@ -12,13 +12,12 @@ pikselsum=0
 while xPos < imageWidth:
     while yPos < imageHeight:
         piksel = image.item(yPos, xPos)  # pikselin değeri okundu
-        pikselsum=piksel+pikselsum
+        pikselsum=piksel+pikselsum  # pikselleri topladım
         yPos = yPos + 1
     yPos = 0
     xPos = xPos + 1
 
-pikselavarage = pikselsum/(imageHeight*imageWidth)
-print(pikselavarage)
+pikselavarage = pikselsum/(imageHeight*imageWidth)  # piksel ortalaması
 
 xPos = 0
 yPos = 0

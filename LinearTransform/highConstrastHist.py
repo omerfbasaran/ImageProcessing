@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-    # Code for plot the histograms
 
-img=cv2.imread("HighContrast.jpg",0)
-a = np.array(img)
-plt.hist(a, bins = 'auto')
-plt.title("histogram")
+img=cv2.imread("lowcontrast.jpg",0)
+dst = cv2.calcHist(img, [0], None, [256], [0, 256])
+
+plt.hist(img.ravel(), 256, [0, 256])
+plt.title('Histogram for gray scale image')
 plt.show()

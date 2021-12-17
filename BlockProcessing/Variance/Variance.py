@@ -1,6 +1,6 @@
 import cv2
 #import numpy as np
-image = cv2.imread("tesla.jpg", 0)
+image = cv2.imread("../Blur/tesla.jpg", 0)
 image2 = image
 window: int = 15  # 3x3 9x9 15x15
 border = window // 2  # kenarlıklar w/2

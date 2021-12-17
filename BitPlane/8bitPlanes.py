@@ -24,11 +24,11 @@ while xPos < imageWidth:
         piksel = img.item(yPos, xPos)
         bit = 0
         while bit < 8:
-            if piksel % 2 == 0:
+            if piksel % 2 == 0: #en sondaki bit eğer 1 ise modu 1 çıkar 0 ise 0 çıkar
                 bits[bit] = 0
             else:
                 bits[bit] = 1
-            piksel = piksel >> 1
+            piksel = piksel >> 1 # değeri 1 bit sağa kaydırıp tek tek bütün bitleri buldum
 
             if bits[bit]==1:
                 ydisp=255
